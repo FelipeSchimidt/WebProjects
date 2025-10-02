@@ -1,11 +1,16 @@
+import { HttpClient } from "@angular/common/http"; 
 
-export class ApplicationRequestService{
+export class Services {
+    constructor(public http: HttpClient) {
 
-    /**
-     * GetApplication
-     * Retorna lista de informações baiscas
-     */
-    public GetApplication() {
-        
+        const baseUrl = 'http://localhost:5261/';
+
+        /*
+         * getList
+         */
+        function getList(this: any) {
+            return this.http.get('baseUrl');
+        }
+
     }
 }

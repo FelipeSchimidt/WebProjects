@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Services } from '../services/services';
 
 @Component({
   selector: 'app-home',
@@ -9,5 +10,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-    title = "Suits de aplicações"
+  
+  NgOnInit(): void {
+    const service = new Services( );
+  }
+    title = "Suits de aplicações";
+
+    
 }
