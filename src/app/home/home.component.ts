@@ -11,7 +11,7 @@ import { Services } from '../services/services';
 export class HomeComponent {
   
   NgOnInit(): void {
-    const service = new Services( );
+    
   }
     title = "Suits de aplicações";
 
