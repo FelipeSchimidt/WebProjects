@@ -1,1 +1,10 @@
 <h3>{{title}}</h3>
+
+<input #inputs>
+<button type="button" (click)="add(inputs.value)">Add</button>
+
+@for (task of tasks; track task){
+<ul>
+    <li>{{task}}</li>
+</ul>
+}

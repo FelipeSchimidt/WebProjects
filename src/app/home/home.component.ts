@@ -10,10 +10,11 @@ import { Services } from '../services/services';
 })
 export class HomeComponent {
   
-  NgOnInit(): void {
-    
-  }
     title = "Suits de aplicações";
+    tasks: Array<string> =  [];
 
-    
+    add(text: string) {
+      this.tasks.push(text)
+      console.log(text);
+    }
 }
