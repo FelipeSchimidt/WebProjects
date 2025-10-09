@@ -1,10 +1,12 @@
 <h3>{{title}}</h3>
 
-<input #inputs>
-<button type="button" (click)="add(inputs.value)">Add</button>
+<div><input #title type="text" placeholder="Title"></div>
+<div><input #description type="text" placeholder="Description" style='height: 30;width: 50;'></div>
+<div><input #attachment type="text" placeholder="Attachment"></div>
+<div><button type="button" (click)="add(title.value, description.value, attachment.value)">Add</button></div>
 
-@for (task of tasks; track task){
-<ul>
-    <li>{{task}}</li>
-</ul>
+@for (item of lista; track item.title){
+    <ul>
+        <li>{{item.title}} - {{item.description}}</li>
+    </ul>
 }
